@@ -1,5 +1,10 @@
 <?php
 
+
+
+$search = $_GET['search'] ?? '';
+
+
 $database = [
     [
         'title' => 'New Jersey',
@@ -45,6 +50,20 @@ $database = [
     ]
 ];
 
+
+$results = $database;
+
+// var_dump($results);
+
+if ($search) {
+    $results = [];
+    foreach ($database as $movie) {
+        $title = strtolower($movie['title']);
+        if (strpos($title, $search) !== false)   $results[] = $movie;
+    }
+}
+
+
 header('Content-Type: application/json');
 
-echo json_encode($database);
+echo json_encode($results);

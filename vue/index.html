@@ -12,12 +12,13 @@
 </head>
 
 <body>
-    <header>
-        <img src="../php-only/spotify.png" alt="logo-spotify">
-    </header>
+    <div id="root">
+        <header>
+            <img src="../php-only/spotify.png" alt="logo-spotify">
+            <input type="text" v-model="search" @keyup.enter="getMovies">
+        </header>
 
-    <main>
-        <div id="root">
+        <main>
 
 
             <div class="container">
@@ -38,7 +39,7 @@
                 </div>
             </div>
 
-    </main>
+        </main>
     </div>
     <script src="script.js"></script>
 </body>
