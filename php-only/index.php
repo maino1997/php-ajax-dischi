@@ -1,6 +1,6 @@
 <?php
 
-include __DIR__ . '../vue/data.php';
+include __DIR__ . '/database.php';
 
 ?>
 
