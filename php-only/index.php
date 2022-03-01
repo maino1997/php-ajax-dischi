@@ -1,6 +1,6 @@
 <?php
 
-include __DIR__ . '/data.php';
+include __DIR__ . '../vue/data.php';
 
 ?>
 
@@ -25,7 +25,7 @@ include __DIR__ . '/data.php';
 
         <div class="container">
             <?php foreach ($database as $movie) : ?>
-                <div class="col-5" v-for="item in List" :key="item.poster">
+                <div class="col-5">
                     <div class="content">
                         <img src="<?php echo $movie['poster'] ?>" alt="img" />
                         <h2><?php echo $movie['title'] ?></h2>

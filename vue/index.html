@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../php-only/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <img src="../php-only/spotify.png" alt="logo-spotify">
+    </header>
+
+    <main>
+        <div id="root">
+
+
+            <div class="container">
+
+                <div class="col-5" v-for="movie in movies" :key="movie.poster">
+                    <div class="content">
+                        <img :src="movie.poster" alt="img" />
+                        <h2>
+                            {{movie.title}}
+                        </h2>
+                        <p>
+                            {{movie.author}}
+                        </p>
+                        <p>
+                            {{movie.year}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+    </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
