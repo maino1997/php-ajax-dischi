@@ -58,8 +58,8 @@ $results = $database;
 if ($search) {
     $results = [];
     foreach ($database as $movie) {
-        $title = strtolower($movie['title']);
-        if (strpos($title, $search) !== false)   $results[] = $movie;
+        $genre = strtolower($movie['genre']);
+        if (strpos($genre, $search) !== false)   $results[] = $movie;
     }
 }
 
